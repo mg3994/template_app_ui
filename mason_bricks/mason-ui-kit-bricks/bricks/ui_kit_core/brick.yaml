@@ -1,0 +1,53 @@
+name: ui_kit_core
+description: Generate core module of your UI Kit Package.
+
+# The following defines the brick repository url.
+# Uncomment and update the following line before publishing the brick.
+repository: https://github.com/banua-coder/mason-ui-kit-bricks.git
+
+# The following defines the version and build number for your brick.
+# A version number is three numbers separated by dots, like 1.2.34
+# followed by an optional build number (separated by a +).
+version: 0.3.0+3
+
+# The following defines the environment for the current brick.
+# It includes the version of mason that the brick requires.
+environment:
+  mason: ">=0.1.0-dev.50 <0.1.0"
+
+# Variables specify dynamic values that your brick depends on.
+# Zero or more variables can be specified for a given brick.
+# Each variable has:
+#  * a type (string, number, boolean, enum, array, or list)
+#  * an optional short description
+#  * an optional default value
+#  * an optional list of default values (array only)
+#  * an optional prompt phrase used when asking for the variable
+#  * a list of values (enums only)
+#  * an optional separator (list only)
+vars:
+  name:
+    type: string
+    description: The name of your UI Kit.
+    default: App
+    prompt: "Please enter the name for your UI Kit:"
+  prefix:
+    type: string
+    description: The prefix to use for component names.
+    default: App
+    prompt: "Please enter the prefix you want to use for file names or components:"
+  fontFamily:
+    type: string
+    description: The font family to be used in your UI Kit.
+    default: inter
+    prompt: "Please enter the font family to use in your UI Kit (make sure it's available in Google Fonts):"
+  githubUsername:
+    type: string
+    description: Your GitHub account username where you have hosted the code.
+    default: username
+    prompt: "Please enter your GitHub account username where the code is hosted:"
+  repositoryName:
+    type: string
+    description: The name of the GitHub repository where your code is hosted.
+    default: app-ui-kit
+    prompt: "Please enter the name of the GitHub repository where your code is hosted:"
